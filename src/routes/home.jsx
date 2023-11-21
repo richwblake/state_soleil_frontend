@@ -2,6 +2,7 @@ import './home.css';
 import { Link } from 'react-router-dom';
 import AboutPhoto from '../assets/main-about-photo.jpg';
 import PortfolioPhoto from '../assets/main-portfolio.jpg';
+import InquirePhoto from '../assets/main-inquire.jpg';
 import ContactBtn from '../components/contactbtn';
 import RightArrow from '../components/rightarrow';
 
@@ -31,6 +32,14 @@ export default function Home() {
                     <img className='home-link-imgs' src={PortfolioPhoto} />
                     <h1>Portfolio</h1>
                     <p>See our work</p>
+                    <RightArrow />
+                </Link>
+            </div>
+            <div className='home-link-container'>
+                <Link className='home-link' to='contact'>
+                    <img className='home-link-imgs' src={InquirePhoto} />
+                    <h1>Inquire</h1>
+                    <p>Transform your event with our arrangements</p>
                     <RightArrow />
                 </Link>
             </div>
