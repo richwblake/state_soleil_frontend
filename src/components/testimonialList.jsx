@@ -1,5 +1,9 @@
+import './testimonialList.css';
 import Testimonial from './testimonial';
 import { useState } from 'react';
+import LeftArrow from './leftarrow';
+import RightArrow from './rightarrow';
+
 
 export default function TestimonialList() {
 
@@ -26,7 +30,27 @@ export default function TestimonialList() {
         },
     ];
 
+    const updateCurrentTest = newId => {
+        if (newId > testimonials.length) {
+            setCurrentTestId(1);
+        } else if (newId < 1) {
+            setCurrentTestId(testimonials.length)
+        } else {
+            setCurrentTestId(newId);
+        }
+    };
+
     const currentTest = testimonials.find(t => t.id === currentTestId);
 
-    return <Testimonial content={currentTest.content} author={currentTest.author} imgUrl={currentTest.imgUrl} />;
+    return (
+        <div id='testimonial-container'>
+            <Testimonial content={currentTest.content} author={currentTest.author} imgUrl={currentTest.imgUrl} />
+            <div id='test-picker'>
+                <p>0{currentTestId}</p>
+                <button className='test-btn' onClick={() => updateCurrentTest(currentTestId - 1)} ><LeftArrow /></button>
+                {" / "}
+                <button className='test-btn' onClick={() => updateCurrentTest(currentTestId + 1)} ><RightArrow /></button>
+            </div>
+        </div>
+    );
 }
