@@ -1,14 +1,13 @@
 #navbar {
-    color: white;
     padding: 30px 20px;
-    background: black;
+    border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 #logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 #navmenu-btn {
