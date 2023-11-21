@@ -1,0 +1,24 @@
+#navbar {
+    color: white;
+    padding: 30px 20px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-size: 1.8rem;
+}
+
+#navmenu-btn {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    background: white;
+    border: 1px;
+    border-radius: 3px;
+}
+
+.hidden {
+    visibility: hidden;
+}
