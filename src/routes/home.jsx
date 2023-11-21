@@ -5,6 +5,7 @@ import PortfolioPhoto from '../assets/main-portfolio.jpg';
 import InquirePhoto from '../assets/main-inquire.jpg';
 import ContactBtn from '../components/contactbtn';
 import RightArrow from '../components/rightarrow';
+import TestimonialList from '../components/testimonialList';
 
 export default function Home() {
     return (
@@ -43,6 +44,7 @@ export default function Home() {
                     <RightArrow />
                 </Link>
             </div>
+            <TestimonialList />
         </div>
     );
 }

@@ -1,0 +1,15 @@
+.testimonial {
+    font-size: 1.5rem;
+    padding: 3rem;
+    background-size: 100%;
+    text-align: center;
+    color: white;
+}
+
+.testimonial p {
+    font-size: 2.8rem;
+}
+
+.testimonial span {
+    font-size: 2rem;
+}
