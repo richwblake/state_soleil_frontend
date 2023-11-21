@@ -38,3 +38,19 @@
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
+
+#home-about-img {
+    margin: 3rem 0 1rem 0;
+    height: auto;
+    max-width: 100%;
+}
+
+#home-about {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#home-about a {
+    text-decoration: none;
+    color: black;
+}
