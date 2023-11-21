@@ -3,6 +3,9 @@ import Testimonial from './testimonial';
 import { useState } from 'react';
 import LeftArrow from './leftarrow';
 import RightArrow from './rightarrow';
+import Testimonial1 from '../assets/testimonial1.jpg';
+import Testimonial2 from '../assets/testimonial2.jpg';
+import Testimonial3 from '../assets/testimonial3.jpg';
 
 
 export default function TestimonialList() {
@@ -14,19 +17,19 @@ export default function TestimonialList() {
             id: 1,
             content: "Testimonial 1",
             author: "Person 1",
-            imgUrl: "/src/assets/testimonial1.jpg",
+            imgUrl: Testimonial1,
         },
         {
             id: 2,
             content: "Testimonial 2",
             author: "Person 2",
-            imgUrl: "/src/assets/testimonial2.jpg",
+            imgUrl: Testimonial2,
         },
         {
             id: 3,
             content: "Testimonial 3",
             author: "Person 3",
-            imgUrl: "/src/assets/testimonial3.jpg",
+            imgUrl: Testimonial3,
         },
     ];
 
