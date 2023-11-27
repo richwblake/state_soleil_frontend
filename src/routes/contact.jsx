@@ -1,7 +1,10 @@
+import HeaderImage from '../components/headerImage';
+import InquiryImage from '../assets/inquiry-main.jpg';
+
 export default function Contact() {
     return (
         <div id='contact-page'>
-            <h1>contact page</h1>
+            <HeaderImage imageTitle={"Contact Us"} imageUrl={InquiryImage} />
         </div>
     );
 }
