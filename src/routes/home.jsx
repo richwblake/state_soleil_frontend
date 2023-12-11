@@ -1,19 +1,21 @@
 import './home.css';
 import { Link } from 'react-router-dom';
+import HomeMainPhoto from '../assets/home-main.jpg';
 import AboutPhoto from '../assets/main-about-photo.jpg';
 import PortfolioPhoto from '../assets/main-portfolio.jpg';
 import InquirePhoto from '../assets/main-inquire.jpg';
 import ContactBtn from '../components/contactbtn';
 import RightArrow from '../components/rightarrow';
 import TestimonialList from '../components/testimonialList';
+import HeaderImage from '../components/headerImage';
 
 export default function Home() {
     return (
         <div id='home-page'>
-            <div id='home-main-img'>
-                <h1>Using old world style to reinvent florals</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p> 
-            </div>
+            <HeaderImage imageTitle={"Using old world style to reinvent florals"} 
+                imageText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"}
+                imageUrl={HomeMainPhoto}
+            />
             <div id='home-title-intro'>
                 <h1>State Soleil Floral Company</h1>
                 <span>Brief company explanation or value of operation</span>

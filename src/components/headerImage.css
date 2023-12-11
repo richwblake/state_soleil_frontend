@@ -1,0 +1,21 @@
+.header-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: pink;
+}
+
+.header-img h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 5rem;
+    margin: 0;
+    padding: 10rem 2rem;
+}
+
+.header-img p {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+
