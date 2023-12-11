@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Birthstone&family=Cormorant+Garamond&family=Ubuntu&display=swap');
+
 .testimonial {
     margin-top: 3rem;
     font-size: 1.5rem;
@@ -13,5 +15,6 @@
 }
 
 .testimonial span {
+    font-family: 'Birthstone', cursive;
     font-size: 2rem;
 }

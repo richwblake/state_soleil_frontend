@@ -13,7 +13,6 @@ export default function Home() {
     return (
         <div id='home-page'>
             <HeaderImage imageTitle={"Using old world style to reinvent florals"} 
-                imageText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"}
                 imageUrl={HomeMainPhoto}
             />
             <div id='home-title-intro'>

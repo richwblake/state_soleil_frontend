@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Cormorant+Garamond&family=Ubuntu&display=swap');
+
 .header-img {
     background-size: cover;
+    background-position: right;
     background-repeat: no-repeat;
     color: pink;
 }
@@ -8,6 +11,7 @@
     text-align: center;
     font-weight: normal;
     font-size: 5rem;
+    font-family: 'Cormorant Garamond', serif;
     margin: 0;
     padding: 10rem 2rem;
 }
