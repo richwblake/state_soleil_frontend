@@ -1,26 +1,34 @@
+import "./inquiryForm.css";
+
 export default function ContactForm() {
     return (
-        <div id="contact-form-container">
-            <form id="contact-form">
-                <div className="input-container">
-                    <label htmlFor="first-name">First Name:</label>
-                    <input type="text" name="first-name" />
+        <div id="inquiry-form-container">
+            <form id="inquiry-form">
+                <h3>Your Name</h3>
+                <div id="names-container">
+                    <div className="input-container">
+                        <input type="text" name="first-name" />
+                        <label htmlFor="first-name">First Name</label>
+                    </div>
+                    <div className="input-container">
+                        <input type="text" name="last-name" />
+                        <label htmlFor="last-name">Last Name</label>
+                    </div>
                 </div>
-                <div className="input-container">
-                    <label htmlFor="last-name">Last Name:</label>
-                    <input type="text" name="last-name" />
+                <h3>Contact Information</h3>
+                <div id="contact-info-container">
+                    <div className="input-container">
+                        <input type="text" name="email" />
+                        <label htmlFor="email">E-mail Address</label>
+                    </div>
+                    <div className="input-container">
+                        <input type="text" name="phone" />
+                        <label htmlFor="phone">Phone Number</label>
+                    </div>
                 </div>
+                <h3>Event Details</h3>
                 <div className="input-container">
-                    <label htmlFor="email">E-mail Address:</label>
-                    <input type="text" name="email" />
-                </div>
-                <div className="input-container">
-                    <label htmlFor="phone">Phone Number:</label>
-                    <input type="text" name="phone" />
-                </div>
-                <div className="input-container">
-                    <label htmlFor="event-type">Event Type:</label>
-                    <select name="event-type" defaultValue="placeholder">
+                    <select className="event-details" name="event-type" defaultValue="placeholder">
                         <option value="placeholder" hidden>Choose an event</option>
                         <option value="wedding">Wedding</option>
                         <option value="corperate">Corperate</option>
@@ -28,13 +36,14 @@ export default function ContactForm() {
                         <option value="party">Party</option>
                         <option value="other">Other</option>
                     </select>
+                    <label htmlFor="event-type">Event Type</label>
                 </div>
                 <div className="input-container">
-                    <label htmlFor="event-date">Date of Event:</label>
-                    <input type="date" name="event-date" />
+                    <input className="event-details" type="date" name="event-date" />
+                    <label htmlFor="event-date">Date of Event</label>
                 </div>
                 <div className="input-container">
-                    <label htmlFor="notes">First Name:</label>
+                    <label htmlFor="notes">Additional Notes</label>
                     <textarea rows={4} cols={40} type="textbox" name="notes" />
                 </div>
                 <div className="input-container">
