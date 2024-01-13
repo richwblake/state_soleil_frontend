@@ -9,6 +9,7 @@ import ScrollToTop from '../components/scrollToTop';
 export default function Layout() {
 
     const [navOpen, setNavOpen] = useState(false);
+
     return (
         <div id='layout'>
             <ScrollToTop />

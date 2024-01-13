@@ -12,9 +12,7 @@ import HeaderImage from '../components/headerImage';
 export default function Home() {
     return (
         <div id='home-page'>
-            <HeaderImage imageTitle={"Using old world style to reinvent florals"} 
-                imageUrl={HomeMainPhoto}
-            />
+            <img src={HomeMainPhoto} />
             <div id='home-title-intro'>
                 <h1>State Soleil Floral Company</h1>
                 <span>Brief company explanation or value of operation</span>

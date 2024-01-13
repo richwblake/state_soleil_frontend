@@ -13,8 +13,6 @@ import HeaderImage from '../components/headerImage';
 export default function Portfolio() {
     return (
         <div id='portfolio-page'>
-            <HeaderImage imageUrl={Port9} imageTitle={"Portfolio"} />
-            <h1>Our Work</h1>
             <img src={Port1} />
             <img src={Port2} />
             <img src={Port3} />
@@ -23,6 +21,7 @@ export default function Portfolio() {
             <img src={Port7} />
             <img src={Port8} />
             <img src={Port9} />
+            <img src={Port1} />
         </div>
     );
 }

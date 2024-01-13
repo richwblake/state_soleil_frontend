@@ -5,7 +5,7 @@ import InquiryForm from '../components/inquiryForm';
 export default function Contact() {
     return (
         <div id='contact-page'>
-            <HeaderImage imageTitle={"Contact Us"} imageUrl={InquiryImage} />
+            <img src={InquiryImage} />
             <InquiryForm />
         </div>
     );
