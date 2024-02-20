@@ -8,13 +8,14 @@ import ContactBtn from '../components/contactbtn';
 import RightArrow from '../components/rightarrow';
 import TestimonialList from '../components/testimonialList';
 import HeaderImage from '../components/headerImage';
+import Logo from '../assets/logo.png';
 
 export default function Home() {
     return (
         <div id='home-page'>
             <img src={HomeMainPhoto} />
             <div id='home-title-intro'>
-                <h1>State Soleil Floral Company</h1>
+                <img src={Logo} />
                 <span>Brief company explanation or value of operation</span>
                 <p>ABOUT THE COMPANY HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
                 <ContactBtn btnText={"get in touch"} />
@@ -43,7 +44,6 @@ export default function Home() {
                     <RightArrow />
                 </Link>
             </div>
-            <TestimonialList />
         </div>
     );
 }

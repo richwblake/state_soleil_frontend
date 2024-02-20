@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
 #navbar {
     padding: 30px 20px;
     display: flex;
@@ -9,11 +11,14 @@
     font-size: 2rem;
 }
 
-#nav-text {
-    text-align: right;
+#path-title {
+    font-family: 'Birthstone', cursive;
+    margin: 0;
+    font-size: 2rem;
 }
 
-.hamburger-react {
+#nav-text {
+    text-align: left;
 }
 
 #navmenu-btn {

@@ -11,7 +11,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <div id='navbar'>
             <div className={isOpen ? "hidden" : "show"} id='nav-text'>
                 <span id='logo'>STATE SOLEIL</span>
-                <p>{pathname.substring(1)}</p>
+                <p id="path-title">{pathname.substring(1)}</p>
             </div>
             <Hamburger id='navmenu-btn' toggled={isOpen} toggle={setIsOpen} />
         </div>
