@@ -1,4 +1,5 @@
 import HeaderImage from '../components/headerImage';
+import ContactBtn from '../components/ContactBtn';
 import AboutHeader from '../assets/about-main.jpg';
 import PersonalImage from '../assets/about1.jpg';
 import InquireImage from '../assets/about2.jpg';
@@ -7,20 +8,18 @@ import './about.css';
 export default function About() {
     return (
         <div id='about-page'>
-            <HeaderImage imageUrl={AboutHeader} imageTitle={"About The Company"}  position={"right"}  />
+            <img src={AboutHeader} />
             <div id="company-about" className="about-content">
-                <h1>About title here</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <h1>ABOUT STATE SOLEIL</h1>
+                <p>State Soleil was founded on the principles of Timelessness of Romance and Tasteful Traditions. We are true romantics here - we want to hear your love story as each is exceptionally unique. We are naturally pulled to the Old World aesthetic and have deep appreciation for the preservation of tradition.</p>
             </div>
-            <HeaderImage imageUrl={PersonalImage} imageTitle={"About the Owner"} />
+            <img src={PersonalImage} />
             <div id="owner-about" className="about-content">
-                <h1>Meet Morgan Rinaldo</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                <h1>ABOUT THE FOUNDER</h1> <p>State Soleil was founded by Morgan Rinaldo, a fourth-generation Floridian. Her family roots begin in Lake Okeechobee and have since spread across the state. Each generation of this family has had a love for botany and florals. Morgan graduated from the Dedman School of Hospitality from Florida State University. Additionally, she has a degree in Construction Management which is instrumental in building wedding floral installations. On her off time, she can be found cooking something spicy or plotting her next getaway!</p>
             </div>
-            <HeaderImage imageUrl={InquireImage} imageTitle={"Get In Touch"} />
-            <div id="about-inquire" className="about-content">
-                <h1>Transform your next event</h1>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+            <div className="contact-card">
+                <img src={InquireImage} />
+                <ContactBtn btnText={"GET IN TOUCH"} />
             </div>
         </div>
     );
