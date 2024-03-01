@@ -16,32 +16,37 @@ export default function Home() {
             <img src={HomeMainPhoto} />
             <div id='home-title-intro'>
                 <img src={Logo} />
-                <span>Brief company explanation or value of operation</span>
-                <p>ABOUT THE COMPANY HERE Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-                <ContactBtn btnText={"get in touch"} />
+                <span className="home-intro-text cormorant-garamond-regular">EXQUISITE FLORALS <span className="home-intro-inner-span birthstone-regular">in</span> SPECTACULAR WEDDINGS</span>
+                <div className="home-intro-text-and-contact">
+                    <p className="home-about-text cormorant-garamond-regular">From the home base of Tampa Bay to the Blue Ridge Mountains, State Soleil will bring ethereal blooms to make your wedding fantasies come to life.</p>
+                    <ContactBtn btnText={"GET IN TOUCH"} />
+                </div>
             </div>
             <div className='home-link-container'>
                 <Link className='home-link' to='about'>
                     <img className='home-link-imgs' src={AboutPhoto} />
-                    <h1>About</h1>
-                    <p>Learn more about our ambitions</p>
-                    <RightArrow />
+                    <div className="home-link-text">
+                        <h1 className='home-link-title cormorant-garamond-regular'>ABOUT</h1>
+                        <p className="birthstone-regular home-link-sub">learn more about our ambitions</p>
+                    </div>
                 </Link>
             </div>
             <div className='home-link-container'>
                 <Link className='home-link' to='portfolio'>
                     <img className='home-link-imgs' src={PortfolioPhoto} />
-                    <h1>Portfolio</h1>
-                    <p>See our work</p>
-                    <RightArrow />
+                    <div className="home-link-text">
+                        <h1 className='home-link-title cormorant-garamond-regular'>PORTFOLIO</h1>
+                        <p className="birthstone-regular home-link-sub">see our work</p>
+                    </div>
                 </Link>
             </div>
             <div className='home-link-container'>
                 <Link className='home-link' to='contact'>
                     <img className='home-link-imgs' src={InquirePhoto} />
-                    <h1>Inquire</h1>
-                    <p>Transform your event with our arrangements</p>
-                    <RightArrow />
+                    <div className="home-link-text">
+                        <h1 className='home-link-title cormorant-garamond-regular'>INQUIRE</h1>
+                        <p className="birthstone-regular home-link-sub">transform your event with our arrangements</p>
+                    </div>
                 </Link>
             </div>
         </div>

@@ -6,7 +6,7 @@ export default function Testimonial({ content, author, imgUrl }) {
             backgroundImage: `url("${imgUrl}")`
         }}
             className="testimonial">
-            <p>"{content}"</p>
+            <p>{content}</p>
             <span>- {author}</span>
         </div>
     );

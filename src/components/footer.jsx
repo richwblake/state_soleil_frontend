@@ -12,7 +12,6 @@ export default function Footer() {
             <div id='sm-icons'>
                 <Insta />
                 <Pintrest />
-                <Twitter />
             </div>
             <button id='return-top' onClick={() => window.scrollTo(0,0)}>
                 <UpArrow />

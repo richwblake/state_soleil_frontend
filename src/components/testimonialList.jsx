@@ -15,20 +15,20 @@ export default function TestimonialList() {
     const testimonials = [
         {
             id: 1,
-            content: "Testimonial 1",
-            author: "Person 1",
+            content: "State Soleil was the best decision I could have made for our wedding day!",
+            author: "Carly S.",
             imgUrl: Testimonial1,
         },
         {
             id: 2,
-            content: "Testimonial 2",
-            author: "Person 2",
+            content: "Morgan immediately understood my vision and brought it to life",
+            author: "Nicole L.",
             imgUrl: Testimonial2,
         },
         {
             id: 3,
-            content: "Testimonial 3",
-            author: "Person 3",
+            content: "State Soleil has easily earned “preferred vendor” status in my books as a Tampa wedding planner.",
+            author: "Emily R.",
             imgUrl: Testimonial3,
         },
     ];
