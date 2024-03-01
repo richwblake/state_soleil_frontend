@@ -11,7 +11,7 @@ export default function About() {
             <img src={AboutHeader} />
             <div id="company-about" className="about-content">
                 <h1>ABOUT STATE SOLEIL</h1>
-                <p>State Soleil was founded on the principles of Timelessness of Romance and Tasteful Traditions. We are true romantics here - we want to hear your love story as each is exceptionally unique. We are naturally pulled to the Old World aesthetic and have deep appreciation for the preservation of tradition.</p>
+                <p>State Soleil’s floral design studio was founded on the principles of Timelessness of Romance and Tasteful Traditions. We are true romantics here - we want to hear your love story as each is exceptionally unique. We are naturally pulled to the Old World aesthetic and have deep appreciation for the preservation of tradition. We care deeply about the attention to detail of your event and do not accept more than one booking per week. This allows us to focus solely on you and your needs. Here at State Soleil, we prioritize quality over everything.</p>
             </div>
             <img src={PersonalImage} />
             <div id="owner-about" className="about-content">
