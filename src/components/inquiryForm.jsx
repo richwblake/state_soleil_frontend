@@ -75,7 +75,7 @@ export default function ContactForm() {
                         <textarea value={formData.notes} onChange={e => updateFormData(e)} rows={4} cols={40} type="textbox" name="notes" />
                     </div>
                     <div className="input-container">
-                        <button type="submit" id="inquiry-submit-btn">Submit Inquiry</button>
+                        <button type="submit" className="cormorant-garamond-regular" id="inquiry-submit-btn">SUBMIT INQUIRY</button>
                     </div>
                 </form>
             </div>
