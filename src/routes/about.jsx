@@ -1,5 +1,5 @@
 import HeaderImage from '../components/headerImage';
-import ContactBtn from '../components/ContactBtn';
+import ContactBtn from '../components/contactbtn';
 import AboutHeader from '../assets/about-main.jpg';
 import PersonalImage from '../assets/about1.jpg';
 import InquireImage from '../assets/about2.jpg';
