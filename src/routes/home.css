@@ -77,3 +77,40 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@media only screen and (min-width: 1000px) {
+    body {
+        .home-content {
+            width: 60%;
+            margin: 0 auto;
+        }
+        
+        .home-main-photo-mb {
+            display: none;
+        }
+
+        .home-logo-img {
+            width: 60%;
+        }
+
+        .home-intro-text {
+            font-size: 5rem;
+        }
+
+        .home-link-imgs {
+            width: 80%;
+            border-left: 1px dashed black;
+            border-right: 1px dashed black;
+            padding: 0 1rem;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        .home-main-photo-dt {
+            display: none;
+        }
+    }
+}

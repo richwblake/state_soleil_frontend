@@ -1,16 +1,56 @@
 .about-content {
     line-height: 1.7rem;
-    padding: 0 15px;
 }
 
 .about-content h1 {
     line-height: 2rem;
 }
 
-.contact-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.about-contact-btn {
+    width: fit-content;
+    margin: 0 auto;
 }
 
+.about-content {
+    padding: 1rem;
+}
 
+@media only screen and (min-width: 1000px) {
+    body {
+        .about-container {
+            width: 65%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .about-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .about-content-img {
+            width: 90%;
+            margin: 0 auto;
+            border-left: 1px dashed black;
+            border-right: 1px dashed black;
+            padding: 0 1rem;
+        }
+
+        .about-header-mb {
+            display: none;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        .about-header-dt {
+            display: none;
+        }
+
+    }
+}
