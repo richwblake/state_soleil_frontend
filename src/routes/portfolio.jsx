@@ -17,7 +17,6 @@ import Port15 from '../assets/port15.jpg';
 import Port16 from '../assets/port16.jpg';
 import Port17 from '../assets/port17.jpg';
 import Port18 from '../assets/port18.jpg';
-import HeaderImage from '../components/headerImage';
 
 export default function Portfolio() {
     return (
