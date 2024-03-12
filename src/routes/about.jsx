@@ -1,4 +1,4 @@
-import ContactBtn from '../components/ContactBtn';
+import ContactBtn from '../components/contactbtn';
 import AboutHeaderMB from '../assets/about-main-mb.jpg';
 import AboutHeaderDT from '../assets/about-main-dt.jpg';
 import PersonalImage from '../assets/about1.jpg';
