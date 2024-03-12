@@ -21,7 +21,7 @@ export default function TestimonialList() {
         },
         {
             id: 2,
-            content: "Morgan immediately understood my vision and brought it to life",
+            content: "Morgan immediately understood my vision and brought it to life.",
             author: "Nicole L.",
             imgUrl: Testimonial2,
         },
