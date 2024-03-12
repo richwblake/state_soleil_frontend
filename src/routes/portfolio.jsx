@@ -21,23 +21,23 @@ import Port18 from '../assets/port18.jpg';
 export default function Portfolio() {
     return (
         <div id='portfolio-page'>
-            <img src={Port1} />
-            <img src={Port3} />
-            <img src={Port5} />
-            <img src={Port6} />
-            <img src={Port7} />
-            <img src={Port2} />
-            <img src={Port8} />
-            <img src={Port9} />
-            <img src={Port10} />
-            <img src={Port13} />
-            <img src={Port11} />
-            <img src={Port12} />
-            <img src={Port14} />
-            <img src={Port15} />
-            <img src={Port16} />
-            <img src={Port17} />
-            <img src={Port18} />
+            <img className='port-img' src={Port1} />
+            <img className='port-img' src={Port3} />
+            <img className='port-img' src={Port5} />
+            <img className='port-img' src={Port6} />
+            <img className='port-img' src={Port7} />
+            <img className='port-img' src={Port2} />
+            <img className='port-img' src={Port8} />
+            <img className='port-img' src={Port9} />
+            <img className='port-img' src={Port10} />
+            <img className='port-img' src={Port13} />
+            <img className='port-img' src={Port11} />
+            <img className='port-img' src={Port12} />
+            <img className='port-img' src={Port14} />
+            <img className='port-img' src={Port15} />
+            <img className='port-img' src={Port16} />
+            <img className='port-img' src={Port17} />
+            <img className='port-img' src={Port18} />
         </div>
     );
 }
