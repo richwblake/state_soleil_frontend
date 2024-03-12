@@ -1,8 +1,24 @@
-#portfolio-title {
-    text-align: center;
+img {
+    max-width: 95%;
+    margin: 3px;
+}
+#portfolio-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-img {
-    object-fit: scale-down;
-    max-width: 100%;
+@media screen and (min-width: 1000px) {
+    #portfolio-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        object-fit: cover;
+        max-width: 30%;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
 }
