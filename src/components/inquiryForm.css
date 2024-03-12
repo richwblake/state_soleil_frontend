@@ -45,16 +45,6 @@ label {
 .event-details {
     width: fit-content;
 }
-.contact-btn {
-    background: white;
-    padding: 0.4rem 0.8rem;
-    margin: 1.5rem;
-    width: fit-content;
-    font-size: 1.3rem;
-    color: black;
-    border: 1px solid black;
-    border-radius: 4px;
-}
 
 .cormorant-garamond-regular {
     font-family: "Cormorant Garamond", serif;
@@ -62,3 +52,8 @@ label {
     font-style: normal;
 }
 
+@media screen and (min-width: 1000px) {
+    label {
+        font-size: 1rem;
+    }
+}
