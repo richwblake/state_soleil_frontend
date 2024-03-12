@@ -31,10 +31,6 @@ const router = createBrowserRouter([
                 path: 'portfolio',
                 element: <Portfolio />,
             },
-            {
-                path: 'offerings',
-                element: <Offerings />,
-            },
         ]
     }
 ]);
