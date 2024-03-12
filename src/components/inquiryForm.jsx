@@ -59,7 +59,7 @@ export default function ContactForm() {
                         <select onChange={e => updateFormData(e)} className="event-type" name="eventType" defaultValue="placeholder">
                             <option value="placeholder" hidden>Choose an event</option>
                             <option value="wedding">Wedding</option>
-                            <option value="corperate">Corperate</option>
+                            <option value="corporate">Corporate</option>
                             <option value="editorial">Editorial</option>
                             <option value="party">Party</option>
                             <option value="other">Other</option>

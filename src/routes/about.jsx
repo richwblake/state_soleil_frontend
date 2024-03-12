@@ -18,7 +18,7 @@ export default function About() {
                 <img className='about-content-img' src={PersonalImage} />
                 <div id="owner-about" className="about-content">
                     <h1>ABOUT THE FOUNDER</h1> 
-                    <p>State Soleil was founded by Morgan Rinaldo, a fourth-generation Floridian. Her family roots begin in Lake Okeechobee and have since spread across the state. Each generation of this family has had a love for botany and florals. Morgan graduated from the Dedman School of Hospitality from Florida State University. Additionally, she has a degree in Construction Management which is instrumental in building wedding floral installations. On her off time, she can be found cooking something spicy or plotting her next getaway!</p>
+                    <p>State Soleil was founded by Morgan Rinaldo, a fourth-generation Floridian. Her family roots begin in Lake Okeechobee and have since spread across the state. Each generation of this family has had a love for botany and florals. Morgan graduated from the Dedman School of Hospitality from Florida State University. Additionally, she has a degree in Building Design and Construction Management which is instrumental in building wedding floral installations. On her off time, she can be found cooking something spicy or plotting her next getaway!</p>
                 </div>
                 <img className='about-content-img' src={InquireImage} />
                 <div className="about-contact-btn">
