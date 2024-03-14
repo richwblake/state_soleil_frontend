@@ -20,12 +20,24 @@ export default function ContactForm() {
             ...formData,
             [e.target.name]: e.target.value,
         }); 
+
     };
 
-    const onSubmit = e => {
+    const onSubmit = async e => {
         e.preventDefault();
-        console.log(formData);
+
+        const postObj = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        };
+        
         setSubmitted(!submitted);
+
+        await fetch('https://willsblake.tech/api/messages', postObj);
+
     };
 
     if (!submitted) {
@@ -35,28 +47,28 @@ export default function ContactForm() {
                     <h3>Your Name</h3>
                     <div id="names-container">
                         <div className="input-container">
-                            <input value={formData.firstName} onChange={e => updateFormData(e)} type="text" name="firstName" />
+                            <input value={formData.firstName} onChange={e => updateFormData(e)} autoComplete='on' id='first-name' type="text" name="firstName" />
                             <label htmlFor="first-name">First Name</label>
                         </div>
                         <div className="input-container">
-                            <input value={formData.lastName} onChange={e => updateFormData(e)} type="text" name="lastName" />
+                            <input value={formData.lastName} onChange={e => updateFormData(e)} autoComplete='on' id='last-name' type="text" name="lastName" />
                             <label htmlFor="last-name">Last Name</label>
                         </div>
                     </div>
                     <h3>Contact Information</h3>
                     <div id="contact-info-container">
                         <div className="input-container">
-                            <input value={formData.email} onChange={e => updateFormData(e)} type="text" name="email" required />
+                            <input value={formData.email} onChange={e => updateFormData(e)} autoComplete='on' id='email' type="text" name="email" required />
                             <label htmlFor="email">E-mail Address</label>
                         </div>
                         <div className="input-container">
-                            <input value={formData.phone} onChange={e => updateFormData(e)} type="text" name="phone" required />
+                            <input value={formData.phone} onChange={e => updateFormData(e)} autoComplete='on' id='phone' type="text" name="phone" required />
                             <label htmlFor="phone">Phone Number</label>
                         </div>
                     </div>
                     <h3>Event Details</h3>
                     <div className="input-container">
-                        <select onChange={e => updateFormData(e)} className="event-type" name="eventType" defaultValue="placeholder">
+                        <select onChange={e => updateFormData(e)} id='event-type' className="event-type" name="eventType" defaultValue="placeholder">
                             <option value="placeholder" hidden>Choose an event</option>
                             <option value="wedding">Wedding</option>
                             <option value="corporate">Corporate</option>
@@ -67,12 +79,12 @@ export default function ContactForm() {
                         <label htmlFor="event-type">Event Type</label>
                     </div>
                     <div className="input-container">
-                        <input onChange={e => updateFormData(e)} className="event-details" defaultValue={new Date().toISOString().substring(0, 10)} type="date" name="date" />
+                        <input onChange={e => updateFormData(e)} id='event-date' className="event-details" defaultValue={new Date().toISOString().substring(0, 10)} type="date" name="date" />
                         <label htmlFor="event-date">Date of Event</label>
                     </div>
                     <div className="input-container">
                         <label htmlFor="notes">Additional Notes</label>
-                        <textarea value={formData.notes} onChange={e => updateFormData(e)} rows={4} cols={40} type="textbox" name="notes" />
+                        <textarea value={formData.notes} onChange={e => updateFormData(e)} rows={4} cols={40} id='notes' type="textbox" name="notes" />
                     </div>
                     <div className="input-container">
                         <button type="submit" className="cormorant-garamond-regular" id="inquiry-submit-btn">SUBMIT INQUIRY</button>
@@ -82,7 +94,7 @@ export default function ContactForm() {
         )
     } else {
         return (
-            <p className="submit-message">Your inquiry has been receieved, please reach out to info@statesoleil.com for further requests</p>
+            <p className="submit-message">Your inquiry has been receieved, please reach out to morgan@statesoleil.com for further requests</p>
         )
     }
 }
