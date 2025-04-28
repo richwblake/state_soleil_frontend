@@ -151,7 +151,7 @@ export default function ContactForm() {
   } else {
     return (
       <p className="submit-message">
-        Your inquiry has been receieved, please reach out to
+        Your inquiry has been received, please reach out to
         morgan@statesoleil.com for further requests
       </p>
     );
