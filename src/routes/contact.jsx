@@ -1,7 +1,6 @@
 import InquiryHeaderDT from '../assets/inquiry-header-dt.jpg';
 import InquiryHeaderMB from '../assets/inquiry-header-mb.jpg';
 import InquiryForm from '../components/inquiryForm';
-import './contact.css';
 
 export default function Contact() {
     return (

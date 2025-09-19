@@ -1,4 +1,3 @@
-import './navbar.css';
 import Hamburger from 'hamburger-react';
 import { useLocation } from 'react-router-dom';
 

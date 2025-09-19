@@ -1,4 +1,3 @@
-import './home.css';
 import { Link } from 'react-router-dom';
 import HomeMainPhotoDT from '../assets/home-main-dt.jpg';
 import HomeMainPhotoMB from '../assets/home-main-mb.jpg';
@@ -6,9 +5,6 @@ import AboutPhoto from '../assets/main-about.jpg';
 import PortfolioPhoto from '../assets/main-portfolio.jpg';
 import InquirePhoto from '../assets/main-inquire.jpg';
 import ContactBtn from '../components/contactbtn';
-import RightArrow from '../components/rightarrow';
-import TestimonialList from '../components/testimonialList';
-import HeaderImage from '../components/headerImage';
 import Logo from '../assets/logo.png';
 
 export default function Home() {

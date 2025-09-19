@@ -1,5 +1,3 @@
-import './icon.css';
-
 export default function Insta() {
     return (
         <div className='footer-sm-btn'>

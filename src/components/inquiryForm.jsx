@@ -1,4 +1,3 @@
-import "./inquiryForm.css";
 import { useState } from "react";
 
 export default function ContactForm() {

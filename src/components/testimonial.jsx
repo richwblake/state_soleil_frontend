@@ -1,5 +1,3 @@
-import './testimonial.css';
-
 export default function Testimonial({ content, author, imgUrl }) {
     return (
         <div style={{

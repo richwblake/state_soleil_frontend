@@ -1,4 +1,3 @@
-import './testimonialList.css';
 import Testimonial from './testimonial';
 import { useState } from 'react';
 import LeftArrow from './leftarrow';

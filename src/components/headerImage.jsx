@@ -1,5 +1,3 @@
-import './headerImage.css';
-
 export default function HeaderImage({ imageText = "", imageTitle, imageUrl, position = "left" }) {
     return (
         <div style={{

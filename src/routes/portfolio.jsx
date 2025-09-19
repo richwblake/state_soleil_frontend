@@ -1,4 +1,3 @@
-import './portfolio.css';
 import Port1 from '../assets/port1.jpg';
 import Port2 from '../assets/port2.jpg';
 import Port3 from '../assets/port3.jpg';

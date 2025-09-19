@@ -1,4 +1,3 @@
-import './contactbtn.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function ContactBtn({ btnText = 'Inquire' }) {
