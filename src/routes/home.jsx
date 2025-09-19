@@ -1,55 +1,72 @@
-import { Link } from 'react-router-dom';
-import HomeMainPhotoDT from '../assets/home-main-dt.jpg';
-import HomeMainPhotoMB from '../assets/home-main-mb.jpg';
-import AboutPhoto from '../assets/main-about.jpg';
-import PortfolioPhoto from '../assets/main-portfolio.jpg';
-import InquirePhoto from '../assets/main-inquire.jpg';
-import ContactBtn from '../components/contactbtn';
-import Logo from '../assets/logo.png';
+import { Link } from "react-router-dom";
+import HomeMainPhotoDT from "../assets/home-main-dt.jpg";
+import HomeMainPhotoMB from "../assets/home-main-mb.jpg";
+import AboutPhoto from "../assets/main-about.jpg";
+import PortfolioPhoto from "../assets/main-portfolio.jpg";
+import InquirePhoto from "../assets/main-inquire.jpg";
+import ContactBtn from "../components/contactbtn";
+import Logo from "../assets/logo.png";
 
 export default function Home() {
-    return (
-        <div id='home-page'>
-            <img className='home-main-photo-mb' src={HomeMainPhotoMB} />
-            <img className='home-main-photo-dt' src={HomeMainPhotoDT} />
-            <div className='home-content'>
-                <div id='home-title-intro'>
-                    <img className='home-logo-img' src={Logo} />
-                    <span className="home-intro-text cormorant-garamond-regular">EXQUISITE FLORALS <span className="home-intro-inner-span birthstone-regular">in</span> SPECTACULAR WEDDINGS</span>
-                    <div className="home-intro-text-and-contact">
-                        <p className="home-about-text cormorant-garamond-regular">From the home base of Tampa Bay to the Blue Ridge Mountains, State Soleil will bring ethereal blooms to make your wedding fantasies come to life.</p>
-                        <ContactBtn btnText={"GET IN TOUCH"} />
-                    </div>
-                </div>
-                <div className='home-link-container'>
-                    <Link className='home-link' to='about'>
-                        <img className='home-link-imgs' src={AboutPhoto} />
-                        <div className="home-link-text">
-                            <h1 className='home-link-title cormorant-garamond-regular'>ABOUT</h1>
-                            <p className="birthstone-regular home-link-sub">learn more about our ambitions</p>
-                        </div>
-                    </Link>
-                </div>
-                <div className='home-link-container'>
-                    <Link className='home-link' to='portfolio'>
-                        <img className='home-link-imgs' src={PortfolioPhoto} />
-                        <div className="home-link-text">
-                            <h1 className='home-link-title cormorant-garamond-regular'>PORTFOLIO</h1>
-                            <p className="birthstone-regular home-link-sub">see our work</p>
-                        </div>
-                    </Link>
-                </div>
-                <div className='home-link-container'>
-                    <Link className='home-link' to='contact'>
-                        <img className='home-link-imgs' src={InquirePhoto} />
-                        <div className="home-link-text">
-                            <h1 className='home-link-title cormorant-garamond-regular'>INQUIRE</h1>
-                            <p className="birthstone-regular home-link-sub">transform your event with our arrangements</p>
-                        </div>
-                    </Link>
-                </div>
-            </div>
+  return (
+    <div id="home-page">
+      <img className="home-main-photo-mb" src={HomeMainPhotoMB} />
+      <img className="home-main-photo-dt" src={HomeMainPhotoDT} />
+      <div className="home-content">
+        <div id="home-title-intro">
+          <img className="home-logo-img" src={Logo} />
+          <span className="home-intro-text cormorant-garamond-regular">
+            EXQUISITE FLORALS{" "}
+            <span className="home-intro-inner-span birthstone-regular">in</span>{" "}
+            SPECTACULAR WEDDINGS
+          </span>
+          <div className="home-intro-text-and-contact">
+            <p className="home-about-text cormorant-garamond-regular">
+              From the home base of Tampa Bay to the Blue Ridge Mountains, State
+              Soleil will bring ethereal blooms to make your wedding fantasies
+              come to life.
+            </p>
+            <ContactBtn btnText={"GET IN TOUCH"} />
+          </div>
         </div>
-    );
+        <div className="home-link-container">
+          <Link className="home-link" to="about">
+            <img className="home-link-imgs" src={AboutPhoto} />
+            <div className="home-link-text">
+              <h1 className="home-link-title cormorant-garamond-regular">
+                ABOUT
+              </h1>
+              <p className="birthstone-regular home-link-sub">
+                learn more about our ambitions
+              </p>
+            </div>
+          </Link>
+        </div>
+        <div className="home-link-container">
+          <Link className="home-link" to="portfolio">
+            <img className="home-link-imgs" src={PortfolioPhoto} />
+            <div className="home-link-text">
+              <h1 className="home-link-title cormorant-garamond-regular">
+                PORTFOLIO
+              </h1>
+              <p className="birthstone-regular home-link-sub">see our work</p>
+            </div>
+          </Link>
+        </div>
+        <div className="home-link-container">
+          <Link className="home-link" to="contact">
+            <img className="home-link-imgs" src={InquirePhoto} />
+            <div className="home-link-text">
+              <h1 className="home-link-title cormorant-garamond-regular">
+                INQUIRE
+              </h1>
+              <p className="birthstone-regular home-link-sub">
+                transform your event with our arrangements
+              </p>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
-
