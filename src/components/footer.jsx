@@ -23,7 +23,6 @@ export default function Footer() {
         />
       </div>
       <button id="return-top" onClick={() => window.scrollTo(0, 0)}>
-        {/* test */}
         <UpArrow />
       </button>
     </div>
