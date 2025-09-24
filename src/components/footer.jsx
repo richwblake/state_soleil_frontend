@@ -1,4 +1,4 @@
-import UpArrow from "./uparrow";
+import Arrow from "./arrow";
 import TestimonialList from "./testimonialList";
 import SocialMediaIcon from "./socialMediaIcon";
 
@@ -21,7 +21,7 @@ export default function Footer() {
         />
       </div>
       <button id="return-top" onClick={() => window.scrollTo(0, 0)}>
-        <UpArrow />
+        <Arrow arrowType={"up"} />
       </button>
     </div>
   );
