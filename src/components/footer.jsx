@@ -1,5 +1,3 @@
-import Insta from "./insta";
-import Pintrest from "./pintrest";
 import UpArrow from "./uparrow";
 import TestimonialList from "./testimonialList";
 import SocialMediaIcon from "./socialMediaIcon";
