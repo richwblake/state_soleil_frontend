@@ -1,8 +1,8 @@
 import ContactBtn from "../components/contactbtn";
-import AboutHeaderMB from "../assets/about-main-mb.jpg";
-import AboutHeaderDT from "../assets/about-main-dt.jpg";
-import PersonalImage from "../assets/about1.jpg";
-import InquireImage from "../assets/about2.jpg";
+import AboutHeaderMB from "../assets/portraits/about-main-mb.webp";
+import AboutHeaderDT from "../assets/landscapes/about-main-dt.webp";
+import PersonalImage from "../assets/universal/about1.webp";
+import InquireImage from "../assets/universal/about2.webp";
 
 export default function About() {
   return (
