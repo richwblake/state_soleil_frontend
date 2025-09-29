@@ -26,7 +26,7 @@ export default function TestimonialList() {
     {
       id: 3,
       content:
-        "State Soleil has easily earned “preferred vendor” status in my books as a Tampa wedding planner.",
+        "State Soleil has easily earned “preferred vendor” status in my books.",
       author: "Emily R.",
       imgUrl: Testimonial3,
     },
@@ -45,27 +45,32 @@ export default function TestimonialList() {
   const currentTest = testimonials.find((t) => t.id === currentTestId);
 
   return (
-    <div id="testimonial-container">
+    <div
+      id="testimonial-container"
+      className="flex flex-col items-center gap-2"
+    >
       <Testimonial
         content={currentTest.content}
         author={currentTest.author}
         imgUrl={currentTest.imgUrl}
       />
-      <div id="test-picker">
-        <p>0{currentTestId}</p>
-        <button
-          className="test-btn"
-          onClick={() => updateCurrentTest(currentTestId - 1)}
-        >
-          <Arrow arrowType={"left"} />
-        </button>
-        {" / "}
-        <button
-          className="test-btn"
-          onClick={() => updateCurrentTest(currentTestId + 1)}
-        >
-          <Arrow arrowType={"right"} />
-        </button>
+      <div id="test-picker" className="text-2xl">
+        <p className="text-center">0{currentTestId}</p>
+        <div id="picker" className="flex items-center gap-3">
+          <button
+            className="test-btn"
+            onClick={() => updateCurrentTest(currentTestId - 1)}
+          >
+            <Arrow arrowType={"left"} />
+          </button>
+          {" / "}
+          <button
+            className="test-btn"
+            onClick={() => updateCurrentTest(currentTestId + 1)}
+          >
+            <Arrow arrowType={"right"} />
+          </button>
+        </div>
       </div>
     </div>
   );
