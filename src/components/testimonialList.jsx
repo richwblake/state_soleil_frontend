@@ -1,8 +1,8 @@
 import Testimonial from "./testimonial";
 import { useState } from "react";
-import Testimonial1 from "../assets/testimonial1.jpg";
-import Testimonial2 from "../assets/testimonial2.jpg";
-import Testimonial3 from "../assets/testimonial3.jpg";
+import Testimonial1 from "../assets/universal/testimonial1.webp";
+import Testimonial2 from "../assets/universal/testimonial2.webp";
+import Testimonial3 from "../assets/universal/testimonial3.webp";
 import Arrow from "./arrow";
 
 export default function TestimonialList() {
