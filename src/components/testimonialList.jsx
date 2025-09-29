@@ -56,14 +56,14 @@ export default function TestimonialList() {
       />
       <div id="test-picker" className="text-2xl">
         <p className="text-center">0{currentTestId}</p>
-        <div id="picker" className="flex items-center gap-3">
+        <div id="picker" className="flex items-center">
           <button
             className="test-btn"
             onClick={() => updateCurrentTest(currentTestId - 1)}
           >
             <Arrow arrowType={"left"} />
           </button>
-          {" / "}
+          <span className="text-3xl">/</span>
           <button
             className="test-btn"
             onClick={() => updateCurrentTest(currentTestId + 1)}

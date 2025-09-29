@@ -7,10 +7,10 @@ export default function Arrow({ arrowType }) {
   };
   return (
     <svg
-      className="icon h-8 w-8"
+      className="icon w-12 h-10"
       xmlns="http://www.w3.org/2000/svg"
       height="1em"
-      viewBox="0 0 384 512"
+      viewBox="0 0 488 512"
     >
       <path d={svgs[arrowType]} />
     </svg>
