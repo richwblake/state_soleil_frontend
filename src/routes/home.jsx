@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import HomeMainPhotoDT from "../assets/home-main-dt.jpg";
-import HomeMainPhotoMB from "../assets/home-main-mb.jpg";
-import AboutPhoto from "../assets/main-about.jpg";
-import PortfolioPhoto from "../assets/main-portfolio.jpg";
-import InquirePhoto from "../assets/main-inquire.jpg";
+import HomeMainPhotoDT from "../assets/landscapes/home-main-dt.webp";
+import HomeMainPhotoMB from "../assets//portraits/home-main-mb.webp";
+import AboutPhoto from "../assets/universal/main-about.webp";
+import PortfolioPhoto from "../assets/universal/main-portfolio.webp";
+import InquirePhoto from "../assets/universal/main-inquire.webp";
 import ContactBtn from "../components/contactbtn";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/universal/logo.png";
 
 export default function Home() {
   return (
