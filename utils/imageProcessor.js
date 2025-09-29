@@ -18,39 +18,45 @@ const config = {
   },
 };
 
-fs.readdirSync(inputDir).forEach(async (image) => {
-  const inputPath = path.join(inputDir, image);
+fs.readdirSync(inputDir, { withFileTypes: true }).forEach(async (entry) => {
+  // Skip directories
+  if (entry.isDirectory()) return;
 
-  // skip over directories in assets folder
-  if (image == "landscapes" || image == "portraits" || image == "universal")
-    return;
+  // Skip non-image files
+  if (!/\.(jpe?g|png|gif|webp|avif)$/i.test(entry.name)) return;
+
+  const inputPath = path.join(inputDir, entry.name);
 
   let output = {};
 
-  if (image.includes("-mb")) {
+  if (entry.name.includes("-mb")) {
     output.path = path.join(
       config.portrait.path,
-      image.replace(/\.\w+$/, ".webp")
+      entry.name.replace(/\.\w+$/, ".webp")
     );
     output.width = config.portrait.width;
-  } else if (image.includes("-dt")) {
+  } else if (entry.name.includes("-dt")) {
     output.path = path.join(
       config.landscape.path,
-      image.replace(/\.\w+$/, ".webp")
+      entry.name.replace(/\.\w+$/, ".webp")
     );
     output.width = config.landscape.width;
   } else {
     output.path = path.join(
       config.universal.path,
-      image.replace(/\.\w+$/, ".webp")
+      entry.name.replace(/\.\w+$/, ".webp")
     );
     output.width = config.universal.width;
   }
 
-  await sharp(inputPath)
-    .resize({ width: output.width })
-    .webp({ quality: 80 })
-    .toFile(output.path);
+  try {
+    await sharp(inputPath)
+      .resize({ width: output.width })
+      .webp({ quality: 80 })
+      .toFile(output.path);
 
-  console.log(`Resized ${image} -> ${output.path}`);
+    console.log(`Resized ${entry.name} -> ${output.path}`);
+  } catch (err) {
+    console.error(`❌ Failed on ${entry.name}:`, err.message);
+  }
 });
