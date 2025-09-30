@@ -10,8 +10,8 @@ import Logo from "../assets/universal/logo.png";
 export default function Home() {
   return (
     <div id="home-page">
-      <img className="home-main-photo-mb" src={HomeMainPhotoMB} />
-      <img className="home-main-photo-dt" src={HomeMainPhotoDT} />
+      <img className="md:hidden" src={HomeMainPhotoMB} />
+      <img className="hidden md:block" src={HomeMainPhotoDT} />
       <div className="home-content">
         <div id="home-title-intro">
           <img className="home-logo-img" src={Logo} />
