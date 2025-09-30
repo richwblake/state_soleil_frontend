@@ -9,7 +9,7 @@ import Home from './routes/home';
 import About from './routes/about';
 import Contact from './routes/contact';
 import Portfolio from './routes/portfolio';
-import Offerings from './routes/offerings';
+import './main.css'
 
 const router = createBrowserRouter([
     {
