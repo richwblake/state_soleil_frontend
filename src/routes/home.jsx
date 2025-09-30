@@ -14,12 +14,12 @@ export default function Home() {
       <img className="hidden md:block" src={HomeMainPhotoDT} />
       <div className="home-content">
         <div id="home-title-intro">
-          <img className="home-logo-img" src={Logo} />
-          <span className="home-intro-text cormorant-garamond-regular">
+          <img className="w-full md:w-1/2 mx-auto" src={Logo} />
+          <p className="cormorant-garamond-regular text-4xl text-center py-5 border-y mx-7 md:text-8xl">
             EXQUISITE FLORALS{" "}
-            <span className="home-intro-inner-span birthstone-regular">in</span>{" "}
+            <span className="birthstone-regular md:text-5xl">in</span>{" "}
             SPECTACULAR WEDDINGS
-          </span>
+          </p>
           <div className="home-intro-text-and-contact">
             <p className="home-about-text cormorant-garamond-regular">
               From the home base of Tampa Bay to the Blue Ridge Mountains, State
