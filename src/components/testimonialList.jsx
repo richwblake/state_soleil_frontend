@@ -55,8 +55,8 @@ export default function TestimonialList() {
         imgUrl={currentTest.imgUrl}
       />
       <div id="test-picker" className="text-2xl">
-        <p className="text-center">0{currentTestId}</p>
-        <div id="picker" className="flex items-center">
+        <p className="text-center p-2 text-3xl">0{currentTestId}</p>
+        <div id="picker" className="flex items-center gap-1">
           <button
             className="test-btn"
             onClick={() => updateCurrentTest(currentTestId - 1)}
