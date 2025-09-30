@@ -21,7 +21,7 @@ export default function Home() {
             SPECTACULAR WEDDINGS
           </p>
           <div className="home-intro-text-and-contact">
-            <p className="cormorant-garamond-regular text-center mx-10 text-3xl py-6 md:w-1/2 md:mx-auto">
+            <p className="cormorant-garamond-regular text-center mx-10 text-3xl py-6 md:w-2/3 md:mx-auto">
               From the home base of Tampa Bay to the Blue Ridge Mountains, State
               Soleil will bring ethereal blooms to make your wedding fantasies
               come to life.
