@@ -8,7 +8,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
   return (
     <div id="navbar" className="flex items-center justify-between p-6">
       <div
-        className={`${isOpen ? "hidden" : "block"} flex flex-col`}
+        className={`${isOpen ? "invisible" : "visible"} flex flex-col`}
         id="nav-text"
       >
         <span id="logo" className="text-2xl">
