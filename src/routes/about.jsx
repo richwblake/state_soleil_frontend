@@ -7,12 +7,12 @@ import InquireImage from "../assets/universal/about2.webp";
 export default function About() {
   return (
     <div id="about-page">
-      <img className="about-header-mb" src={AboutHeaderMB} />
-      <img className="about-header-dt" src={AboutHeaderDT} />
-      <div className="about-container">
-        <div id="company-about" className="about-content">
-          <h1>ABOUT STATE SOLEIL</h1>
-          <p>
+      <img className="md:hidden mb-8" src={AboutHeaderMB} />
+      <img className="hidden md:block mb-8" src={AboutHeaderDT} />
+      <div className="space-y-8 my-8">
+        <div id="company-about" className="about-content space-y-8 my-8 mx-4">
+          <h1 className="text-center text-5xl">ABOUT STATE SOLEIL</h1>
+          <p className="text-xl leading-relaxed">
             State Soleil’s floral design studio was founded on the principles of
             Timelessness of Romance and Tasteful Traditions. We are true
             romantics here - we want to hear your love story as each is
@@ -25,9 +25,9 @@ export default function About() {
           </p>
         </div>
         <img className="about-content-img" src={PersonalImage} />
-        <div id="owner-about" className="about-content">
-          <h1>ABOUT THE FOUNDER</h1>
-          <p>
+        <div id="owner-about" className="about-content space-y-8 my-8 mx-4">
+          <h1 className="text-center text-5xl">ABOUT THE FOUNDER</h1>
+          <p className="text-xl leading-relaxed">
             State Soleil was founded by Morgan Rinaldo, a fourth-generation
             Floridian. Her family roots begin in Lake Okeechobee and have since
             spread across the state. Each generation of this family has had a
@@ -39,8 +39,8 @@ export default function About() {
             getaway!
           </p>
         </div>
-        <img className="about-content-img" src={InquireImage} />
-        <div className="about-contact-btn">
+        <div className="about-contact-btn space-y-8 my-8">
+          <img className="about-content-img" src={InquireImage} />
           <ContactBtn btnText={"GET IN TOUCH"} />
         </div>
       </div>
