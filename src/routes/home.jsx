@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import HomeMainPhotoDT from "../assets/landscapes/home-main-dt.webp";
 import HomeMainPhotoMB from "../assets//portraits/home-main-mb.webp";
 import AboutPhoto from "../assets/universal/main-about.webp";
@@ -6,6 +5,7 @@ import PortfolioPhoto from "../assets/universal/main-portfolio.webp";
 import InquirePhoto from "../assets/universal/main-inquire.webp";
 import ContactBtn from "../components/contactbtn";
 import Logo from "../assets/universal/logo.png";
+import HomeNavContainer from "../components/HomeNavContainer";
 
 export default function Home() {
   return (
@@ -29,43 +29,24 @@ export default function Home() {
             <ContactBtn btnText={"GET IN TOUCH"} />
           </div>
         </div>
-        <div className="home-link-container">
-          <Link className="home-link" to="about">
-            <img className="home-link-imgs" src={AboutPhoto} />
-            <div className="home-link-text">
-              <h1 className="home-link-title cormorant-garamond-regular">
-                ABOUT
-              </h1>
-              <p className="birthstone-regular home-link-sub">
-                learn more about our ambitions
-              </p>
-            </div>
-          </Link>
-        </div>
-        <div className="home-link-container">
-          <Link className="home-link" to="portfolio">
-            <img className="home-link-imgs" src={PortfolioPhoto} />
-            <div className="home-link-text">
-              <h1 className="home-link-title cormorant-garamond-regular">
-                PORTFOLIO
-              </h1>
-              <p className="birthstone-regular home-link-sub">see our work</p>
-            </div>
-          </Link>
-        </div>
-        <div className="home-link-container">
-          <Link className="home-link" to="contact">
-            <img className="home-link-imgs" src={InquirePhoto} />
-            <div className="home-link-text">
-              <h1 className="home-link-title cormorant-garamond-regular">
-                INQUIRE
-              </h1>
-              <p className="birthstone-regular home-link-sub">
-                transform your event with our arrangements
-              </p>
-            </div>
-          </Link>
-        </div>
+        <HomeNavContainer
+          to={"/about"}
+          image={AboutPhoto}
+          title={"ABOUT"}
+          text={"learn more about our ambitions"}
+        />
+        <HomeNavContainer
+          to={"/portfolio"}
+          image={PortfolioPhoto}
+          title={"PORTFOLIO"}
+          text={"see our work"}
+        />
+        <HomeNavContainer
+          to={"/contact"}
+          image={InquirePhoto}
+          title={"INQUIRE"}
+          text={"transform your event with our arrangements"}
+        />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HomeNavContainer({ to, image, title, text }) {
   return (
     <div className="home-link-container">
