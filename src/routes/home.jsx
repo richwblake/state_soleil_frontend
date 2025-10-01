@@ -20,8 +20,8 @@ export default function Home() {
             <span className="birthstone-regular md:text-5xl">in</span>{" "}
             SPECTACULAR WEDDINGS
           </p>
-          <div className="home-intro-text-and-contact">
-            <p className="cormorant-garamond-regular text-center mx-10 text-3xl py-6 md:w-2/3 md:mx-auto">
+          <div className="home-intro-text-and-contact space-y-8 my-8">
+            <p className="cormorant-garamond-regular text-center mx-10 text-3xl md:w-2/3 md:mx-auto">
               From the home base of Tampa Bay to the Blue Ridge Mountains, State
               Soleil will bring ethereal blooms to make your wedding fantasies
               come to life.

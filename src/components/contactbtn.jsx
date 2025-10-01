@@ -10,7 +10,8 @@ export default function ContactBtn({ btnText = "Inquire" }) {
   return (
     <button
       onClick={handleNavigate}
-      className="contact-btn cormorant-garamond-regular"
+      id="contact-btn"
+      className="cormorant-garamond-regular border rounded p-2 mx-auto block text-xl"
     >
       {btnText}
     </button>
