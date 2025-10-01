@@ -29,24 +29,26 @@ export default function Home() {
             <ContactBtn btnText={"GET IN TOUCH"} />
           </div>
         </div>
-        <HomeNavContainer
-          to={"/about"}
-          image={AboutPhoto}
-          title={"ABOUT"}
-          text={"learn more about our ambitions"}
-        />
-        <HomeNavContainer
-          to={"/portfolio"}
-          image={PortfolioPhoto}
-          title={"PORTFOLIO"}
-          text={"see our work"}
-        />
-        <HomeNavContainer
-          to={"/contact"}
-          image={InquirePhoto}
-          title={"INQUIRE"}
-          text={"transform your event with our arrangements"}
-        />
+        <div id="home-nav-container" className="text-center">
+          <HomeNavContainer
+            to={"/about"}
+            image={AboutPhoto}
+            title={"ABOUT"}
+            text={"learn more about our ambitions"}
+          />
+          <HomeNavContainer
+            to={"/portfolio"}
+            image={PortfolioPhoto}
+            title={"PORTFOLIO"}
+            text={"see our work"}
+          />
+          <HomeNavContainer
+            to={"/contact"}
+            image={InquirePhoto}
+            title={"INQUIRE"}
+            text={"transform your event with our arrangements"}
+          />
+        </div>
       </div>
     </div>
   );

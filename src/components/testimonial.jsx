@@ -4,7 +4,7 @@ export default function Testimonial({ content, author, imgUrl }) {
       style={{
         backgroundImage: `url("${imgUrl}")`,
       }}
-      className="text-white text-center p-8 text-lg bg-cover w-full"
+      className="text-white text-center py-20 text-lg bg-cover w-full"
     >
       <p>{content}</p>
       <span className="birthstone-regular text-2xl">- {author}</span>
