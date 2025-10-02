@@ -5,8 +5,8 @@ import InquiryForm from "../components/inquiryForm";
 export default function Contact() {
   return (
     <div id="contact-page">
-      <img className="dt-header-img" src={InquiryHeaderDT} />
-      <img className="mb-header-img" src={InquiryHeaderMB} />
+      <img className="hidden md:block" src={InquiryHeaderDT} />
+      <img className="md:hidden" src={InquiryHeaderMB} />
       <div className="contact-container">
         <h1 className="inquiry-header cormorant-garamond-regular">
           Let's plan something <i>beautiful</i> together
