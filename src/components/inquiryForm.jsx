@@ -1,21 +1,27 @@
-import { Form } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 
 export async function action({ request }) {
+  const formData = await request.formData();
+  const formJson = Object.fromEntries(formData);
   const config = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(formData),
+    body: formJson,
   };
 
-  console.log(`config value: ${config}`);
+  return config;
 
   // TODO - COMMENT BACK IN FOR PRODUCTION
   // await fetch("https://statesoleil.com/api/messages", config);
 }
 
 export default function ContactForm() {
+  const actionData = useActionData();
+
+  console.log(actionData);
+
   return (
     <Form method="post" id="inquiry-form">
       <h3>Your Name</h3>
