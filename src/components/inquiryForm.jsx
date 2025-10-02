@@ -7,7 +7,8 @@ export async function action({ request }) {
     body: JSON.stringify(formData),
   };
 
-  await fetch("https://statesoleil.com/api/messages", config);
+  // TODO - COMMENT BACK IN FOR PRODUCTION
+  // await fetch("https://statesoleil.com/api/messages", config);
 }
 
 export default function ContactForm() {
