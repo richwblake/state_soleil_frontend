@@ -1,3 +1,5 @@
+import { Form } from "react-router-dom";
+
 export async function action({ request }) {
   const config = {
     method: "POST",
@@ -7,13 +9,15 @@ export async function action({ request }) {
     body: JSON.stringify(formData),
   };
 
+  console.log(`config value: ${config}`);
+
   // TODO - COMMENT BACK IN FOR PRODUCTION
   // await fetch("https://statesoleil.com/api/messages", config);
 }
 
 export default function ContactForm() {
   return (
-    <form id="inquiry-form">
+    <Form method="post" id="inquiry-form">
       <h3>Your Name</h3>
       <div className="input-container">
         <input
@@ -85,6 +89,6 @@ export default function ContactForm() {
       <button type="submit" className="cormorant-garamond-regular">
         SUBMIT INQUIRY
       </button>
-    </form>
+    </Form>
   );
 }
