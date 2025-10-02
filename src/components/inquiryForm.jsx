@@ -1,5 +1,5 @@
 export async function action({ request }) {
-  const postObj = {
+  const config = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -7,7 +7,7 @@ export async function action({ request }) {
     body: JSON.stringify(formData),
   };
 
-  await fetch("https://statesoleil.com/api/messages", postObj);
+  await fetch("https://statesoleil.com/api/messages", config);
 }
 
 export default function ContactForm() {
