@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   return (
     <Form method="post" id="inquiry-form">
-      <div className="grid grid-cols-2 w-full md:w-80 mx-auto gap-x-5">
+      <div className="grid grid-cols-2 max-w-80 mx-auto gap-x-5">
         <h3 className="col-span-2 mb-4 text-xl">Your Name</h3>
         <div className="input-container">
           <input
@@ -33,7 +33,7 @@ export default function ContactForm() {
             autoComplete="off"
             type="text"
             name="firstName"
-            className="border rounded w-full "
+            className="border rounded w-full px-1"
           />
           <label className="block text-xs m-1" htmlFor="first-name">
             First Name
@@ -46,7 +46,7 @@ export default function ContactForm() {
             autoComplete="off"
             type="text"
             name="lastName"
-            className="border rounded w-full "
+            className="border rounded w-full px-1"
           />
           <label className="block text-xs m-1" htmlFor="last-name">
             Last Name
@@ -59,7 +59,7 @@ export default function ContactForm() {
             autoComplete="email"
             type="email"
             name="email"
-            className="border rounded w-full"
+            className="border rounded w-full px-1"
             required
           />
           <label className="block text-xs m-1" htmlFor="email">
@@ -72,7 +72,7 @@ export default function ContactForm() {
             type="text"
             autoComplete="tel"
             name="phone"
-            className="border rounded w-full"
+            className="border rounded w-full px-1"
             required
           />
           <label className="block text-xs m-1" htmlFor="phone">
@@ -83,11 +83,11 @@ export default function ContactForm() {
         <div className="input-container">
           <select
             id="event-type"
-            className="border rounded"
+            className="border rounded px-1"
             name="eventType"
             defaultValue="placeholder"
           >
-            <option value="placeholder" hidden>
+            <option value="placeholder" disabled hidden>
               Choose an event
             </option>
             <option value="wedding">Wedding</option>
@@ -103,7 +103,7 @@ export default function ContactForm() {
         <div className="input-container">
           <input
             id="event-date"
-            className="border rounded"
+            className="border rounded px-1"
             defaultValue={new Date().toISOString().substring(0, 10)}
             type="date"
             name="date"
@@ -121,7 +121,7 @@ export default function ContactForm() {
             id="notes"
             type="textbox"
             name="notes"
-            className="border rounded w-full"
+            className="border rounded w-full px-1"
           />
         </div>
         <button
