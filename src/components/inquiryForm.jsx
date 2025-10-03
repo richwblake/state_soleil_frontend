@@ -1,26 +1,53 @@
-import { Form, useActionData } from "react-router-dom";
+import { Form, useActionData, useNavigation } from "react-router-dom";
+import Swal from "sweetalert2";
+import Logo from "../assets/universal/logo-cropped.png";
 
 export async function action({ request }) {
   const formData = await request.formData();
   const formJson = Object.fromEntries(formData);
+  console.log("hit");
   const config = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: formJson,
+    body: JSON.stringify(formJson),
   };
+  try {
+    const response = await fetch("https://localhost:5000/", config);
 
-  return config;
+    if (response.ok) {
+      return { state: "success" };
+    } else {
+      return { state: "failure" };
+    }
+  } catch (error) {
+    return { state: "failure" };
+  }
 
   // TODO - COMMENT BACK IN FOR PRODUCTION
   // await fetch("https://statesoleil.com/api/messages", config);
 }
 
 export default function ContactForm() {
+  const navigation = useNavigation();
   const actionData = useActionData();
 
-  console.log(actionData);
+  const isSubmitting = navigation.state === "submitting";
+
+  if (!isSubmitting && actionData) {
+    if (actionData.state === "success") {
+      console.log("hide form");
+    } else {
+      Swal.fire({
+        title: "We ran into an issue submitting your inquiry",
+        imageUrl: Logo,
+        imageWidth: 150,
+        imageHeight: 150,
+        text: "Please try again!",
+      });
+    }
+  }
 
   return (
     <Form method="post" id="inquiry-form">
