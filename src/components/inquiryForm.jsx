@@ -15,6 +15,7 @@ export async function action({ request }) {
   };
   try {
     const response = await fetch("https://localhost:5000/", config);
+    // const response = { ok: true };
 
     if (response.ok) {
       return { state: "success" };
@@ -37,14 +38,32 @@ export default function ContactForm() {
 
   if (!isSubmitting && actionData) {
     if (actionData.state === "success") {
-      console.log("hide form");
-    } else {
       Swal.fire({
-        title: "We ran into an issue submitting your inquiry",
+        title: "Thank you for reaching out!",
+        text: "We'll be in touch shortly",
         imageUrl: Logo,
         imageWidth: 150,
         imageHeight: 150,
-        text: "Please try again!",
+        showConfirmButton: true,
+        buttonsStyling: false,
+        customClass: {
+          confirmButton:
+            "rounded px-4 py-2 border cormorant-garamond-regular text-xl",
+        },
+      });
+    } else {
+      Swal.fire({
+        title: "We ran into an issue submitting your inquiry!",
+        text: "Please try again",
+        imageUrl: Logo,
+        imageWidth: 150,
+        imageHeight: 150,
+        showConfirmButton: true,
+        buttonsStyling: false,
+        customClass: {
+          confirmButton:
+            "rounded px-4 py-2 border cormorant-garamond-regular text-xl",
+        },
       });
     }
   }
