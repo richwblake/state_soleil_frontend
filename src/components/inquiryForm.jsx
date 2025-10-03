@@ -24,10 +24,11 @@ export default function ContactForm() {
 
   return (
     <Form method="post" id="inquiry-form">
-      <div className="grid grid-cols-2 w-full md:w-3/4 mx-auto border">
-        <h3 className="col-span-2 mb-4">Your Name</h3>
-        <div className="input-container md:max-w-3/4">
+      <div className="grid grid-cols-2 w-full md:w-80 mx-auto gap-x-5">
+        <h3 className="col-span-2 mb-4 text-xl">Your Name</h3>
+        <div className="input-container">
           <input
+            required
             id="first-name"
             autoComplete="off"
             type="text"
@@ -38,8 +39,9 @@ export default function ContactForm() {
             First Name
           </label>
         </div>
-        <div className="justify-self-end md:max-w-3/4">
+        <div className="justify-self-end">
           <input
+            required
             id="last-name"
             autoComplete="off"
             type="text"
@@ -50,21 +52,21 @@ export default function ContactForm() {
             Last Name
           </label>
         </div>
-        <h3 className="col-span-2 my-4">Contact Information</h3>
+        <h3 className="col-span-2 my-4 text-xl">Contact Information</h3>
         <div id="contact-info-container">
           <input
             id="email"
             autoComplete="email"
-            type="text"
+            type="email"
             name="email"
-            className="border rounded w-full md:max-w-3/4"
+            className="border rounded w-full"
             required
           />
           <label className="block text-xs m-1" htmlFor="email">
             E-mail Address
           </label>
         </div>
-        <div className="justify-self-end md:max-w-3/4">
+        <div className="justify-self-end">
           <input
             id="phone"
             type="text"
@@ -77,11 +79,11 @@ export default function ContactForm() {
             Phone Number
           </label>
         </div>
-        <h3 className="col-span-2 my-4">Event Details</h3>
+        <h3 className="col-span-2 my-4 text-xl">Event Details</h3>
         <div className="input-container">
           <select
             id="event-type"
-            className="event-type"
+            className="border rounded"
             name="eventType"
             defaultValue="placeholder"
           >
@@ -101,7 +103,7 @@ export default function ContactForm() {
         <div className="input-container">
           <input
             id="event-date"
-            className="event-details"
+            className="border rounded"
             defaultValue={new Date().toISOString().substring(0, 10)}
             type="date"
             name="date"
@@ -110,7 +112,7 @@ export default function ContactForm() {
             Date of Event
           </label>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 my-4">
           <label className="block text-xs m-1" htmlFor="notes">
             Additional Notes
           </label>
@@ -122,7 +124,10 @@ export default function ContactForm() {
             className="border rounded w-full"
           />
         </div>
-        <button type="submit" className="cormorant-garamond-regular col-span-2">
+        <button
+          type="submit"
+          className="cormorant-garamond-regular col-span-2 border rounded w-fit mx-auto py-2 px-4"
+        >
           SUBMIT INQUIRY
         </button>
       </div>
