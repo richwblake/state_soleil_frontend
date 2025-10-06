@@ -1,3 +1,7 @@
-export default function PortfolioImage() {
-  return <div>Portfolio page</div>;
+export default function PortfolioImage({ path }) {
+  return (
+    <div>
+      <img src={path} alt="porfolio picture" />
+    </div>
+  );
 }
