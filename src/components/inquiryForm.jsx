@@ -47,8 +47,8 @@ export default function ContactForm() {
         showConfirmButton: true,
         buttonsStyling: false,
         customClass: {
-          confirmButton:
-            "rounded px-4 py-2 border cormorant-garamond-regular text-xl",
+          popup: "cormorant-garamond-regular",
+          confirmButton: "rounded px-4 py-2 border  text-xl",
         },
       });
     } else {
@@ -61,6 +61,7 @@ export default function ContactForm() {
         showConfirmButton: true,
         buttonsStyling: false,
         customClass: {
+          popup: "cormorant-garamond-regular",
           confirmButton:
             "rounded px-4 py-2 border cormorant-garamond-regular text-xl",
         },
