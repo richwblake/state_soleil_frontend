@@ -8,8 +8,14 @@ export default function Portfolio() {
   const imgPaths = Object.values(images).map((mod) => mod.default);
 
   const renderPortfolioImages = () => {
-    return imgPaths.map((ip) => <PortfolioImage key={ip} path={ip} />);
+    return imgPaths.map((ip) => (
+      <PortfolioImage key={ip} path={ip} comment={"comment here"} />
+    ));
   };
 
-  return <div id="portfolio-page">{renderPortfolioImages()}</div>;
+  return (
+    <div id="portfolio-page" className="space-y-9">
+      {renderPortfolioImages()}
+    </div>
+  );
 }
