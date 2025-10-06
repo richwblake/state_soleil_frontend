@@ -1,158 +1,183 @@
-import { useState } from "react";
+import { Form, useActionData, useNavigation } from "react-router-dom";
+import Swal from "sweetalert2";
+import Logo from "../assets/universal/logo-cropped.png";
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const formJson = Object.fromEntries(formData);
+  console.log("hit");
+  const config = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formJson),
+  };
+  try {
+    const response = await fetch("https://localhost:5000/", config);
+    // const response = { ok: true };
+
+    if (response.ok) {
+      return { state: "success" };
+    } else {
+      return { state: "failure" };
+    }
+  } catch (error) {
+    return { state: "failure" };
+  }
+
+  // TODO - COMMENT BACK IN FOR PRODUCTION
+  // await fetch("https://statesoleil.com/api/messages", config);
+}
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    eventType: "Chose an event",
-    date: "yyyy-MM-dd",
-    notes: "",
-  });
+  const navigation = useNavigation();
+  const actionData = useActionData();
 
-  const [submitted, setSubmitted] = useState(false);
+  const isSubmitting = navigation.state === "submitting";
 
-  const updateFormData = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-
-    const postObj = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    };
-
-    setSubmitted(!submitted);
-
-    await fetch("https://statesoleil.com/api/messages", postObj);
-  };
-
-  if (!submitted) {
-    return (
-      <div id="inquiry-form-container">
-        <form onSubmit={onSubmit} id="inquiry-form">
-          <h3>Your Name</h3>
-          <div id="names-container">
-            <div className="input-container">
-              <input
-                value={formData.firstName}
-                onChange={(e) => updateFormData(e)}
-                autoComplete="on"
-                id="first-name"
-                type="text"
-                name="firstName"
-              />
-              <label htmlFor="first-name">First Name</label>
-            </div>
-            <div className="input-container">
-              <input
-                value={formData.lastName}
-                onChange={(e) => updateFormData(e)}
-                autoComplete="on"
-                id="last-name"
-                type="text"
-                name="lastName"
-              />
-              <label htmlFor="last-name">Last Name</label>
-            </div>
-          </div>
-          <h3>Contact Information</h3>
-          <div id="contact-info-container">
-            <div className="input-container">
-              <input
-                value={formData.email}
-                onChange={(e) => updateFormData(e)}
-                autoComplete="on"
-                id="email"
-                type="text"
-                name="email"
-                required
-              />
-              <label htmlFor="email">E-mail Address</label>
-            </div>
-            <div className="input-container">
-              <input
-                value={formData.phone}
-                onChange={(e) => updateFormData(e)}
-                autoComplete="on"
-                id="phone"
-                type="text"
-                name="phone"
-                required
-              />
-              <label htmlFor="phone">Phone Number</label>
-            </div>
-          </div>
-          <h3>Event Details</h3>
-          <div className="input-container">
-            <select
-              onChange={(e) => updateFormData(e)}
-              id="event-type"
-              className="event-type"
-              name="eventType"
-              defaultValue="placeholder"
-            >
-              <option value="placeholder" hidden>
-                Choose an event
-              </option>
-              <option value="wedding">Wedding</option>
-              <option value="corporate">Corporate</option>
-              <option value="editorial">Editorial</option>
-              <option value="party">Party</option>
-              <option value="other">Other</option>
-            </select>
-            <label htmlFor="event-type">Event Type</label>
-          </div>
-          <div className="input-container">
-            <input
-              onChange={(e) => updateFormData(e)}
-              id="event-date"
-              className="event-details"
-              defaultValue={new Date().toISOString().substring(0, 10)}
-              type="date"
-              name="date"
-            />
-            <label htmlFor="event-date">Date of Event</label>
-          </div>
-          <div className="input-container">
-            <label htmlFor="notes">Additional Notes</label>
-            <textarea
-              value={formData.notes}
-              onChange={(e) => updateFormData(e)}
-              rows={4}
-              cols={40}
-              id="notes"
-              type="textbox"
-              name="notes"
-            />
-          </div>
-          <div className="input-container">
-            <button
-              type="submit"
-              className="cormorant-garamond-regular"
-              id="inquiry-submit-btn"
-            >
-              SUBMIT INQUIRY
-            </button>
-          </div>
-        </form>
-      </div>
-    );
-  } else {
-    return (
-      <p className="submit-message">
-        Your inquiry has been received, please reach out to
-        morgan@statesoleil.com for further requests
-      </p>
-    );
+  if (!isSubmitting && actionData) {
+    if (actionData.state === "success") {
+      Swal.fire({
+        title: "Thank you for reaching out!",
+        text: "We'll be in touch shortly",
+        imageUrl: Logo,
+        imageWidth: 150,
+        imageHeight: 150,
+        showConfirmButton: true,
+        buttonsStyling: false,
+        customClass: {
+          popup: "cormorant-garamond-regular",
+          confirmButton: "rounded px-4 py-2 border  text-xl",
+        },
+      });
+    } else {
+      Swal.fire({
+        title: "We ran into an issue submitting your inquiry!",
+        text: "Please try again",
+        imageUrl: Logo,
+        imageWidth: 150,
+        imageHeight: 150,
+        showConfirmButton: true,
+        buttonsStyling: false,
+        customClass: {
+          popup: "cormorant-garamond-regular",
+          confirmButton:
+            "rounded px-4 py-2 border cormorant-garamond-regular text-xl",
+        },
+      });
+    }
   }
+
+  return (
+    <Form method="post" id="inquiry-form">
+      <div className="grid grid-cols-2 max-w-80 mx-auto gap-x-5">
+        <h3 className="col-span-2 mb-4 text-xl">Your Name</h3>
+        <div className="input-container">
+          <input
+            required
+            id="first-name"
+            autoComplete="off"
+            type="text"
+            name="firstName"
+            className="border rounded w-full px-1"
+          />
+          <label className="block text-xs m-1" htmlFor="first-name">
+            First Name
+          </label>
+        </div>
+        <div className="justify-self-end">
+          <input
+            required
+            id="last-name"
+            autoComplete="off"
+            type="text"
+            name="lastName"
+            className="border rounded w-full px-1"
+          />
+          <label className="block text-xs m-1" htmlFor="last-name">
+            Last Name
+          </label>
+        </div>
+        <h3 className="col-span-2 my-4 text-xl">Contact Information</h3>
+        <div id="contact-info-container">
+          <input
+            id="email"
+            autoComplete="email"
+            type="email"
+            name="email"
+            className="border rounded w-full px-1"
+            required
+          />
+          <label className="block text-xs m-1" htmlFor="email">
+            E-mail Address
+          </label>
+        </div>
+        <div className="justify-self-end">
+          <input
+            id="phone"
+            type="text"
+            autoComplete="tel"
+            name="phone"
+            className="border rounded w-full px-1"
+            required
+          />
+          <label className="block text-xs m-1" htmlFor="phone">
+            Phone Number
+          </label>
+        </div>
+        <h3 className="col-span-2 my-4 text-xl">Event Details</h3>
+        <div className="input-container">
+          <select
+            id="event-type"
+            className="border rounded px-1"
+            name="eventType"
+            defaultValue="placeholder"
+          >
+            <option value="placeholder" disabled hidden>
+              Choose an event
+            </option>
+            <option value="wedding">Wedding</option>
+            <option value="corporate">Corporate</option>
+            <option value="editorial">Editorial</option>
+            <option value="party">Party</option>
+            <option value="other">Other</option>
+          </select>
+          <label className="block text-xs m-1" htmlFor="event-type">
+            Event Type
+          </label>
+        </div>
+        <div className="input-container">
+          <input
+            id="event-date"
+            className="border rounded px-1"
+            defaultValue={new Date().toISOString().substring(0, 10)}
+            type="date"
+            name="date"
+          />
+          <label className="block text-xs m-1" htmlFor="event-date">
+            Date of Event
+          </label>
+        </div>
+        <div className="col-span-2 my-4">
+          <label className="block text-xs m-1" htmlFor="notes">
+            Additional Notes
+          </label>
+          <textarea
+            rows={5}
+            id="notes"
+            type="textbox"
+            name="notes"
+            className="border rounded w-full px-1"
+          />
+        </div>
+        <button
+          type="submit"
+          className="cormorant-garamond-regular col-span-2 border rounded w-fit mx-auto py-2 px-4"
+        >
+          SUBMIT INQUIRY
+        </button>
+      </div>
+    </Form>
+  );
 }

@@ -7,8 +7,8 @@ export default function Contact() {
     <div id="contact-page">
       <img className="hidden md:block" src={InquiryHeaderDT} />
       <img className="md:hidden" src={InquiryHeaderMB} />
-      <div className="contact-container">
-        <h1 className="inquiry-header cormorant-garamond-regular">
+      <div className="w-fit md:w-1/2 space-y-6 my-6 mx-auto px-5">
+        <h1 className="cormorant-garamond-regular text-5xl text-center pb-6 border-b">
           Let's plan something <i>beautiful</i> together
         </h1>
         <InquiryForm />
