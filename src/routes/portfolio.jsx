@@ -17,6 +17,14 @@ import Port17 from "../assets/universal/port17.webp";
 import Port18 from "../assets/universal/port18.webp";
 
 export default function Portfolio() {
+  const images = import.meta.glob("/src/assets/universal/port*.webp", {
+    eager: true,
+  });
+
+  const imgPaths = Object.values(images).map((mod) => mod.default);
+
+  console.log(imgPaths);
+
   return (
     <div id="portfolio-page">
       <img className="port-img" src={Port1} />
