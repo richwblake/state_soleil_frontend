@@ -9,7 +9,13 @@ export default function Portfolio() {
 
   const renderPortfolioImages = () => {
     return imgPaths.map((ip) => (
-      <PortfolioImage key={ip} path={ip} comment={"comment here"} />
+      <PortfolioImage
+        key={ip}
+        path={ip}
+        comment={"comment here"}
+        location={"Tampa, Fl"}
+        credits={"@photographer"}
+      />
     ));
   };
 
