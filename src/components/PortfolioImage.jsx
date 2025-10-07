@@ -2,7 +2,7 @@ import PortfolioThumb from "../assets/universal/insta-pic.webp";
 
 export default function PortfolioImage({ path, credits, comment, location }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 md:hidden">
       <div className="flex items-center gap-3 px-2">
         <img
           src={PortfolioThumb}
