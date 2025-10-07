@@ -30,7 +30,7 @@ export default function Portfolio() {
       <div id="portfolio-page" className="space-y-9">
         {renderPortfolioImages()}
       </div>
-      <div className="hidden md:block md:grid md:grid-cols-3 md:mx-auto md:mb-12 md:gap-6 md:w-3/4">
+      <div className="hidden md:block md:grid md:grid-cols-3 md:mx-auto md:my-12 md:gap-6 md:w-[90%]">
         {renderRawImages()}
       </div>
     </div>
