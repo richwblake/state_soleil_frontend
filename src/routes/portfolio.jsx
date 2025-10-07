@@ -19,9 +19,20 @@ export default function Portfolio() {
     ));
   };
 
+  const renderRawImages = () => {
+    return imgPaths.map((ip) => (
+      <img className="h-full rounded-md" key={ip} src={ip} alt={ip} />
+    ));
+  };
+
   return (
-    <div id="portfolio-page" className="space-y-9">
-      {renderPortfolioImages()}
+    <div>
+      <div id="portfolio-page" className="space-y-9">
+        {renderPortfolioImages()}
+      </div>
+      <div className="hidden md:block md:grid md:grid-cols-3 md:mx-auto md:mb-12 md:gap-6 md:w-3/4">
+        {renderRawImages()}
+      </div>
     </div>
   );
 }
