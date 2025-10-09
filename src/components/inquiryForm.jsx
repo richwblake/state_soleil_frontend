@@ -55,6 +55,7 @@ export default function ContactForm() {
       Swal.fire({
         title: "We ran into an issue submitting your inquiry!",
         text: "Please try again",
+        icon: "error",
         imageUrl: Logo,
         imageWidth: 150,
         imageHeight: 150,
