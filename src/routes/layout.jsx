@@ -1,9 +1,10 @@
-import Navbar from "../components/navbar";
-import NavMenu from "../components/navmenu";
-import Footer from "../components/footer";
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import ScrollToTop from "../components/scrollToTop";
+import Navbar from "../components/Navbar";
+import MobileNavOverlay from "../components/MobileNavOverlay";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function Layout() {
   const [navOpen, setNavOpen] = useState(false);
@@ -12,14 +13,12 @@ export default function Layout() {
     <div id="layout">
       <ScrollToTop />
       <Navbar isOpen={navOpen} setIsOpen={setNavOpen} />
-      {navOpen ? (
-        <NavMenu setIsOpen={setNavOpen} />
-      ) : (
-        <>
-          <Outlet />
-          <Footer />
-        </>
-      )}
+      {navOpen && <MobileNavOverlay setIsOpen={setNavOpen} />}
+      <main>
+        <Outlet />
+      </main>
+      <TestimonialCarousel />
+      <Footer />
     </div>
   );
 }

@@ -1,15 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Ubuntu&display=swap");
 @import "tailwindcss";
 
+/* ── Design Tokens ── */
+:root {
+  --color-cream: #FDFAF5;
+  --color-cream-dark: #F5F0E8;
+  --color-gold: #C5A572;
+  --color-gold-light: #D4BC8B;
+  --color-gold-dark: #A8884F;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-light: #5A5A5A;
+}
+
+/* ── Base ── */
 body {
   margin: 0;
   font-family: "Archivo", sans-serif;
-  background-color: #fffff2;
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
 }
 
+/* ── Font Utility Classes ── */
 .cormorant-garamond-regular {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -17,4 +36,104 @@ body {
   font-family: "Birthstone", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+/* ── Scroll-Reveal Animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Page Fade-In ── */
+.page-enter {
+  animation: pageFadeIn 0.5s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── SweetAlert Theme ── */
+.swal-luxe-popup {
+  background-color: var(--color-cream) !important;
+  border: 1px solid var(--color-gold) !important;
+  border-radius: 4px !important;
+  font-family: "Cormorant Garamond", serif !important;
+  color: var(--color-charcoal) !important;
+}
+
+.swal-luxe-popup .swal2-title {
+  font-family: "Cormorant Garamond", serif !important;
+  color: var(--color-charcoal) !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 0.05em !important;
+}
+
+.swal-luxe-popup .swal2-html-container {
+  font-family: "Archivo", sans-serif !important;
+  color: var(--color-charcoal-light) !important;
+}
+
+.swal-luxe-confirm {
+  background-color: var(--color-gold) !important;
+  color: white !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.1em !important;
+  padding: 0.5rem 2rem !important;
+  border: none !important;
+  border-radius: 2px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.swal-luxe-confirm:hover {
+  background-color: var(--color-gold-dark) !important;
+}
+
+/* ── Form Element Normalization (iOS/Android/cross-device) ── */
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  font-size: 16px; /* Prevents iOS zoom on focus */
+  background-color: white;
+  color: var(--color-charcoal);
+  font-family: "Archivo", sans-serif;
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235A5A5A' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+}
+
+/* ── Gold Focus Ring ── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-gold) !important;
+  box-shadow: 0 0 0 1px var(--color-gold);
+}
+
+/* ── Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
 }
