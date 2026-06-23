@@ -71,10 +71,17 @@ export default function Footer() {
 
       {/* Copyright */}
       <p
+        className="text-xs tracking-wide mb-2"
+        style={{ color: "var(--color-charcoal-light)" }}
+      >
+        &copy; {new Date().getFullYear()} State Soleil Floristry. All rights
+        reserved.
+      </p>
+      <p
         className="text-xs tracking-wide"
         style={{ color: "var(--color-charcoal-light)" }}
       >
-        &copy; {new Date().getFullYear()} State Soleil Floristry. All rights reserved.
+        Website by Saltwave Studio
       </p>
 
       {/* Scroll to top */}
